@@ -1,3 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6935645961194666" crossorigin="anonymous"></script>
+
+    <meta name="google-site-verification" content="d5OZt5AFQKDYSoSGM-CjGdxtCaPSMmhcWWMAI5lEHWM" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SimplyConvert Pro",
+      "operatingSystem": "Any",
+      "applicationCategory": "UtilitiesApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "124" }
+    }</script>
+
+    <title>SimplyConvert Pro | Free Unit Converter: Digital, DIY, Cooking & More</title>
+    <meta name="description" content="Fast, free, and accurate unit converter. Easily convert length, weight, digital storage (GB to MB), number bases (Hex to Dec), and cooking units.">
+    <meta name="keywords" content="free unit converter, simplyconvert pro, GB to MB, Hex to Binary, decimal to hexadecimal, bits to bytes, drill bit conversion, cooking conversions, measurement converter">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --glass: rgba(255, 255, 255, 0.95);
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --transition-speed: 0.4s;
+        }
+
+        body.dark-mode {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --glass: rgba(30, 41, 59, 0.9);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box; margin: 0; padding: 0;
+            font-family: 'Inter', sans-serif;
+            transition: background var(--transition-speed), color var(--transition-speed);
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: var(--bg-gradient);
+            padding: 60px 20px;
+        }
+
+        .theme-toggle {
+            position: fixed; top: 20px; right: 20px;
+            background: var(--glass); border: 1px solid rgba(255,255,255,0.2);
+            padding: 12px; border-radius: 50%; cursor: pointer; z-index: 1000;
+        }
+
+        .converter-card {
+            background: var(--glass); backdrop-filter: blur(10px);
+            width: 100%; max-width: 480px; padding: 40px; border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); margin-bottom: 40px;
+        }
+
+        header { text-align: center; margin-bottom: 32px; }
+        h1 { font-size: 28px; font-weight: 800; color: var(--text-main); }
+
+        .field-group { margin-bottom: 20px; }
+        label { display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--primary); margin-bottom: 8px; }
+        
+        input, select { 
+            width: 100%; padding: 14px 16px; font-size: 16px; color: var(--text-main); 
+            background: rgba(243, 244, 246, 0.5); border: 2px solid transparent; border-radius: 12px; outline: none; 
+        }
+
+        body.dark-mode input, body.dark-mode select { background: rgba(15, 23, 42, 0.5); }
+        input:focus { border-color: var(--primary); background: white; }
+        body.dark-mode input:focus { background: #0f172a; }
+
+        .unit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+        .result-container { 
+            margin-top: 32px; padding: 24px; border-radius: 20px; text-align: center;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%); 
+            border: 1px solid rgba(99, 102, 241, 0.2); 
+        }
+
+        #outputValue { font-size: 28px; font-weight: 800; color: var(--text-main); display: block; margin-top: 8px; word-break: break-all; }
+        
+        .copy-btn {
+            margin-top: 15px; background: var(--primary); color: white; border: none;
+            padding: 8px 16px; border-radius: 8px; font-weight: 600; cursor: pointer;
+            font-size: 13px; display: inline-flex; align-items: center; gap: 6px;
+        }
+
+        .content-section { 
+            width: 100%; max-width: 800px; background: var(--glass); padding: 40px; 
+            border-radius: 24px; color: var(--text-main); margin-bottom: 20px; line-height: 1.6; 
+        }
+
+        .content-section table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .content-section th { text-align: left; border-bottom: 2px solid var(--primary); padding: 10px; }
+        .content-section td { padding: 10px; border-bottom: 1px solid rgba(0,0,0,0.05); }
+
+        footer { width: 100%; max-width: 800px; text-align: center; color: var(--text-muted); padding: 30px; }
+        #privacyLink { color: var(--primary); text-decoration: underline; cursor: pointer; font-weight: 600; }
+        #privacySection { display: none; margin-top: 25px; text-align: left; background: white; padding: 25px; border-radius: 16px; color: #1f2937; }
+        body.dark-mode #privacySection { background: #1e293b; color: white; }
+    </style>
+</head>
 <body>
 
     <button class="theme-toggle" onclick="toggleDarkMode()" title="Toggle Dark Mode">
@@ -6,14 +124,14 @@
 
     <div class="converter-card">
         <header>
-            <h1>SimplyConvert Pro</h1>
-            <p style="color:var(--text-muted); font-size: 14px;">Precision v1.6</p>
+            <h1>Unit Converter</h1>
+            <p style="color:var(--text-muted); font-size: 14px;">SimplyConvert Pro v1.5</p>
         </header>
 
         <div class="field-group">
             <label>Category</label>
-            <select id="category" onchange="updateDynamicContent(); initUnits(true);">
-                <option value="length">📏 Length & Distance</option>
+            <select id="category" onchange="initUnits(true)">
+                <option value="length">📏 Length</option>
                 <option value="weight">⚖️ Weight / Mass</option>
                 <option value="temp">🌡️ Temperature</option>
                 <option value="volume">🥣 Volume / Cooking</option>
@@ -23,7 +141,7 @@
         </div>
 
         <div class="field-group">
-            <label>Amount</label>
+            <label id="inputLabel">Amount</label>
             <input type="text" id="userInput" placeholder="Enter value..." oninput="performConversion()">
         </div>
 
@@ -45,67 +163,33 @@
                 <span id="copyText">📋 Copy Result</span>
             </button>
         </div>
+        <p style="text-align: center; font-size: 11px; color: var(--text-muted); margin-top: 15px;">✓ Precision Verified Logic</p>
     </div>
 
-    <div id="info-length" class="content-section dynamic-info">
-      <h3>📏 Length & DIY Reference</h3>
+    <section class="content-section">
+      <h3>Tech & Digital Reference</h3>
       <table>
-        <thead><tr><th>Tool/Need</th><th>Conversion</th></tr></thead>
+        <thead><tr><th>Conversion</th><th>Value</th></tr></thead>
         <tbody>
-          <tr><td>1/4 inch Drill Bit</td><td>6.35 mm</td></tr>
-          <tr><td>1/2 inch Pipe</td><td>12.7 mm</td></tr>
-          <tr><td>1 Mile</td><td>1.609 Kilometers</td></tr>
-        </tbody>
-      </table>
-      <div style="margin-top:20px;">
-          <p><strong>FAQ:</strong> How many inches are in a cm? 1 inch is exactly 2.54 cm.</p>
-      </div>
-    </div>
-
-    <div id="info-volume" class="content-section dynamic-info" style="display:none;">
-      <h3>🥣 Kitchen & Cooking Reference</h3>
-      <table>
-        <thead><tr><th>Kitchen Unit</th><th>Metric (ml)</th></tr></thead>
-        <tbody>
-          <tr><td>1 US Cup</td><td>236.59 ml</td></tr>
-          <tr><td>1 Tablespoon</td><td>14.79 ml</td></tr>
-          <tr><td>1 Teaspoon</td><td>4.93 ml</td></tr>
-        </tbody>
-      </table>
-      <div style="margin-top:20px;">
-          <p><strong>FAQ:</strong> How many tablespoons in a cup? There are 16 tablespoons in 1 US cup.</p>
-      </div>
-    </div>
-
-    <div id="info-digital" class="content-section dynamic-info" style="display:none;">
-      <h3>💾 Digital Storage Reference</h3>
-      <table>
-        <thead><tr><th>Unit</th><th>Binary Value</th></tr></thead>
-        <tbody>
-          <tr><td>1 Gigabyte (GB)</td><td>1024 Megabytes</td></tr>
-          <tr><td>1 Terabyte (TB)</td><td>1024 Gigabytes</td></tr>
+          <tr><td>1 Gigabyte (GB)</td><td>1024 Megabytes (MB)</td></tr>
           <tr><td>1 Byte</td><td>8 Bits</td></tr>
+          <tr><td>Decimal 15</td><td>Hexadecimal F</td></tr>
+          <tr><td>1 Terabyte (TB)</td><td>1024 Gigabytes (GB)</td></tr>
         </tbody>
       </table>
-      <div style="margin-top:20px;">
-          <p><strong>FAQ:</strong> Why 1024? Computers use binary (base 2), so $2^{10}$ equals 1024.</p>
-      </div>
-    </div>
+    </section>
 
-    <div id="info-bases" class="content-section dynamic-info" style="display:none;">
-      <h3>🔢 Programmer's Base Reference</h3>
-      <p>Converting between different number systems is essential for coding and hardware design.</p>
-      <ul>
-          <li><strong>Binary:</strong> Base 2 (0, 1)</li>
-          <li><strong>Hexadecimal:</strong> Base 16 (0-9, A-F)</li>
-          <li><strong>Decimal:</strong> Base 10 (Standard)</li>
-      </ul>
-    </div>
-
-    <div id="info-default" class="content-section dynamic-info" style="display:none;">
-        <h3>✨ Pro Tip</h3>
-        <p>SimplyConvert Pro uses standard international conversion ratios. If you need a specific unit added to this category, contact us!</p>
-    </div>
+    <section class="content-section">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div style="margin-bottom: 15px;">
+            <p><strong>Is 1 GB equal to 1000 or 1024 MB?</strong></p>
+            <p>In computing (Binary standard), 1 GB equals 1,024 MB. Some manufacturers use the decimal standard (1,000 MB), but SimplyConvert Pro uses the 1,024 standard for precision.</p>
+        </div>
+        <div>
+            <p><strong>How do I convert Decimal to Hex?</strong></p>
+            <p>Select "Number Bases," set From to Decimal and To to Hex. Hexadecimal uses numbers 0-9 and letters A-F to represent values.</p>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2026 SimplyConvert Pro. All rights reserved.</p>
@@ -114,7 +198,7 @@
         </div>
         <div id="privacySection">
             <h3>Privacy Policy</h3>
-            <p>We use cookies to improve your experience and serve ads via Google AdSense.</p>
+            <p>This site uses cookies for traffic analysis and AdSense monetization.</p>
             <button onclick="togglePrivacy()" style="margin-top:10px; cursor:pointer;">Close</button>
         </div>
     </footer>
@@ -128,24 +212,6 @@
             digital: { bits: 8388608, bytes: 1048576, kilobytes: 1024, megabytes: 1, gigabytes: 0.0009765625, terabytes: 0.00000095367 },
             bases: { decimal: 10, binary: 2, hex: 16, octal: 8 }
         };
-
-        // NEW: Dynamic Content Switcher
-        function updateDynamicContent() {
-            const cat = document.getElementById('category').value;
-            
-            // Hide all dynamic sections
-            document.querySelectorAll('.dynamic-info').forEach(section => {
-                section.style.display = 'none';
-            });
-
-            // Show the relevant one, or default
-            const target = document.getElementById('info-' + cat);
-            if (target) {
-                target.style.display = 'block';
-            } else {
-                document.getElementById('info-default').style.display = 'block';
-            }
-        }
 
         function savePreference() {
             const prefs = {
@@ -253,8 +319,8 @@
                 document.getElementById('category').value = prefs.cat;
                 if (prefs.dark) toggleDarkMode();
             }
-            updateDynamicContent(); // Load correct content on start
             initUnits();
         };
     </script>
 </body>
+</html>
