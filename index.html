@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6935645961194666" crossorigin="anonymous"></script>
+
     <title>SimplyConvert Pro | Free Unit Converter: Inches to CM, Weight & More</title>
     <meta name="title" content="SimplyConvert Pro | Free Unit Converter: Inches to CM, Weight & More">
     <meta name="description" content="A fast, free, and accurate unit converter. Easily convert length (inches to cm), weight (kg to lbs), temperature, and area. Simple, professional, and mobile-friendly.">
@@ -59,147 +61,31 @@
             margin-bottom: 40px;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 32px;
-        }
+        header { text-align: center; margin-bottom: 32px; }
+        h1 { font-size: 28px; font-weight: 800; color: var(--text-main); letter-spacing: -0.025em; }
+        .tagline { color: var(--text-muted); font-size: 14px; margin-top: 4px; }
 
-        h1 {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--text-main);
-            letter-spacing: -0.025em;
-        }
+        .field-group { margin-bottom: 20px; }
+        label { display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--primary); margin-bottom: 8px; letter-spacing: 0.05em; }
+        input, select { width: 100%; padding: 14px 16px; font-size: 16px; color: var(--text-main); background: #f3f4f6; border: 2px solid transparent; border-radius: 12px; outline: none; transition: all 0.2s ease; }
+        input:focus, select:focus { background: #fff; border-color: var(--primary); box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1); }
 
-        .tagline {
-            color: var(--text-muted);
-            font-size: 14px;
-            margin-top: 4px;
-        }
+        .unit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-        .field-group {
-            margin-bottom: 20px;
-        }
+        .result-container { margin-top: 32px; padding: 24px; background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border-radius: 20px; text-align: center; border: 1px solid #e2e8f0; }
+        #outputValue { font-size: 32px; font-weight: 800; color: var(--text-main); display: block; margin-top: 8px; }
+        .unit-label { color: var(--primary); font-size: 14px; font-weight: 600; }
 
-        label {
-            display: block;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: var(--primary);
-            margin-bottom: 8px;
-            letter-spacing: 0.05em;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 14px 16px;
-            font-size: 16px;
-            color: var(--text-main);
-            background: #f3f4f6;
-            border: 2px solid transparent;
-            border-radius: 12px;
-            outline: none;
-            transition: all 0.2s ease;
-        }
-
-        input:focus, select:focus {
-            background: #fff;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
-        }
-
-        .unit-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .result-container {
-            margin-top: 32px;
-            padding: 24px;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid #e2e8f0;
-        }
-
-        #outputValue {
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--text-main);
-            display: block;
-            margin-top: 8px;
-        }
-
-        .unit-label {
-            color: var(--primary);
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        /* Shared Styling for Content Sections */
-        .content-section {
-            width: 100%;
-            max-width: 800px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(5px);
-            padding: 40px;
-            border-radius: 24px;
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
+        .content-section { width: 100%; max-width: 800px; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px); padding: 40px; border-radius: 24px; color: white; border: 1px solid rgba(255, 255, 255, 0.2); margin-bottom: 20px; line-height: 1.6; }
         .content-section h2, .content-section h3 { margin-bottom: 15px; color: #fff; }
         .content-section p { margin-bottom: 15px; opacity: 0.95; }
         .content-section ul { margin-bottom: 25px; padding-left: 20px; }
-        .content-section li { margin-bottom: 10px; }
-        .content-section strong { color: #fff; border-bottom: 1px dashed rgba(255,255,255,0.4); }
+        .content-section strong { color: #fff; border-bottom: 1px dashed rgba(255,255,255,0.3); }
 
-        footer {
-            width: 100%;
-            max-width: 800px;
-            margin-top: 40px;
-            padding: 30px 20px;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 14px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        #privacyLink {
-            color: #fff;
-            text-decoration: underline;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        #privacySection {
-            display: none;
-            margin-top: 25px;
-            text-align: left;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 16px;
-            color: var(--text-main);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-
-        .close-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 8px;
-            margin-top: 15px;
-            cursor: pointer;
-            font-weight: bold;
-        }
+        footer { width: 100%; max-width: 800px; margin-top: 40px; padding: 30px 20px; text-align: center; color: rgba(255, 255, 255, 0.7); font-size: 14px; border-top: 1px solid rgba(255, 255, 255, 0.2); }
+        #privacyLink { color: #fff; text-decoration: underline; cursor: pointer; font-weight: 600; }
+        #privacySection { display: none; margin-top: 25px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto; background: white; padding: 25px; border-radius: 16px; color: var(--text-main); box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+        .close-btn { background: var(--primary); color: white; border: none; padding: 8px 16px; border-radius: 8px; margin-top: 15px; cursor: pointer; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -251,7 +137,7 @@
             <li><strong>Choose Units:</strong> Select the units you are converting from and to using the dropdown menus.</li>
         </ul>
         <h3>Why Use Our Converter?</h3>
-        <p>Whether you are a student, a professional, or just need to convert inches to centimeters for a home project, SimplyConvert Pro provides high-precision results in real-time. We support a wide range of global standards, including Metric and Imperial systems.</p>
+        <p>SimplyConvert Pro provides high-precision results in real-time. We support a wide range of global standards, including Metric and Imperial systems.</p>
     </section>
 
     <section class="content-section">
@@ -272,8 +158,8 @@
 
     <section class="content-section">
         <h3>About SimplyConvert Pro</h3>
-        <p>SimplyConvert Pro was built to provide a fast, ad-free (for now!), and highly accurate way to switch between global measurement units. Our mission is to strip away the clutter of traditional conversion sites and provide a "utility-first" experience for students, engineers, and everyday users.</p>
-        <p><strong>Have a suggestion?</strong> We are constantly adding new units. If you'd like to see a specific category added, feel free to reach out.</p>
+        <p>SimplyConvert Pro was built to provide a fast, ad-free, and highly accurate way to switch between global measurement units. Our mission is to strip away the clutter of traditional conversion sites.</p>
+        <p><strong>Have a suggestion?</strong> If you'd like to see a specific category added, feel free to reach out.</p>
         <a href="mailto:support@simplyconvert.pro" style="display: inline-block; background: white; color: var(--primary); padding: 10px 20px; border-radius: 10px; font-weight: 700; text-decoration: none; margin-top: 10px;">📩 Contact Support</a>
     </section>
 
@@ -286,36 +172,15 @@
         <div id="privacySection">
             <h3 style="margin-bottom: 10px;">Privacy Policy</h3>
             <p style="margin-bottom: 10px; font-size: 13px; color: #4b5563;">At SimplyConvert Pro, we value your privacy. This website uses cookies to analyze traffic and serve personalized ads via Google AdSense. By using this site, you consent to our use of these cookies.</p>
-            <p style="font-size: 13px; color: #4b5563;">We do not collect personal identification information unless voluntarily provided by the user.</p>
             <button class="close-btn" onclick="togglePrivacy()">Close</button>
         </div>
     </footer>
 
     <script>
         const library = {
-            length: {
-                meters: 1,
-                centimeters: 100,
-                millimeters: 1000,
-                inches: 39.3701,
-                feet: 3.28084,
-                yards: 1.09361,
-                kilometers: 0.001,
-                miles: 0.000621371
-            },
-            weight: {
-                kilograms: 1,
-                grams: 1000,
-                pounds: 2.20462,
-                ounces: 35.274,
-                metric_tons: 0.001
-            },
-            area: {
-                sq_meters: 1,
-                sq_feet: 10.7639,
-                acres: 0.000247105,
-                hectares: 0.0001
-            },
+            length: { meters: 1, centimeters: 100, millimeters: 1000, inches: 39.3701, feet: 3.28084, yards: 1.09361, kilometers: 0.001, miles: 0.000621371 },
+            weight: { kilograms: 1, grams: 1000, pounds: 2.20462, ounces: 35.274, metric_tons: 0.001 },
+            area: { sq_meters: 1, sq_feet: 10.7639, acres: 0.000247105, hectares: 0.0001 },
             temp: { celsius: 'C', fahrenheit: 'F', kelvin: 'K' }
         };
 
@@ -324,8 +189,7 @@
             const fromS = document.getElementById('fromUnit');
             const toS = document.getElementById('toUnit');
             const units = Object.keys(library[cat]);
-            fromS.innerHTML = '';
-            toS.innerHTML = '';
+            fromS.innerHTML = ''; toS.innerHTML = '';
             units.forEach(u => {
                 const name = u.replace('_', ' ').toUpperCase();
                 fromS.options.add(new Option(name, u));
@@ -341,17 +205,10 @@
             const from = document.getElementById('fromUnit').value;
             const to = document.getElementById('toUnit').value;
             const display = document.getElementById('outputValue');
-            if (isNaN(val)) {
-                display.textContent = "0.00";
-                return;
-            }
+            if (isNaN(val)) { display.textContent = "0.00"; return; }
             let result;
-            if (cat === 'temp') {
-                result = convertTemp(val, from, to);
-            } else {
-                const baseVal = val / library[cat][from];
-                result = baseVal * library[cat][to];
-            }
+            if (cat === 'temp') { result = convertTemp(val, from, to); }
+            else { const baseVal = val / library[cat][from]; result = baseVal * library[cat][to]; }
             display.textContent = parseFloat(result.toFixed(4)).toLocaleString();
             document.getElementById('resultLabel').textContent = to.replace('_', ' ');
         }
