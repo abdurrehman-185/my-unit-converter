@@ -41,11 +41,11 @@
         body {
             min-height: 100vh;
             display: flex;
-            flex-direction: column; /* Stack card and info section */
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             background: var(--bg-gradient);
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
 
         .converter-card {
@@ -138,8 +138,8 @@
             font-weight: 600;
         }
 
-        /* Info Section Styling */
-        .info-section {
+        /* Shared Styling for Content Sections */
+        .content-section {
             width: 100%;
             max-width: 800px;
             background: rgba(255, 255, 255, 0.15);
@@ -148,31 +148,57 @@
             border-radius: 24px;
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .info-section h2, .info-section h3 {
-            margin-bottom: 15px;
-            color: #fff;
-        }
-
-        .info-section p {
             margin-bottom: 20px;
             line-height: 1.6;
-            opacity: 0.9;
         }
 
-        .info-section ul {
-            margin-bottom: 25px;
-            padding-left: 20px;
+        .content-section h2, .content-section h3 { margin-bottom: 15px; color: #fff; }
+        .content-section p { margin-bottom: 15px; opacity: 0.95; }
+        .content-section ul { margin-bottom: 25px; padding-left: 20px; }
+        .content-section li { margin-bottom: 10px; }
+        .content-section strong { color: #fff; border-bottom: 1px dashed rgba(255,255,255,0.4); }
+
+        footer {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 40px;
+            padding: 30px 20px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .info-section li {
-            margin-bottom: 10px;
-            line-height: 1.5;
+        #privacyLink {
+            color: #fff;
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 600;
         }
 
-        .info-section strong {
-            color: #eef2ff;
+        #privacySection {
+            display: none;
+            margin-top: 25px;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            color: var(--text-main);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .close-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -216,7 +242,7 @@
         </div>
     </div>
 
-    <section class="info-section">
+    <section class="content-section">
         <h2>How to Use SimplyConvert Pro</h2>
         <p>Our professional unit converter allows you to switch between different measurements instantly. Simply follow these steps:</p>
         <ul>
@@ -227,6 +253,43 @@
         <h3>Why Use Our Converter?</h3>
         <p>Whether you are a student, a professional, or just need to convert inches to centimeters for a home project, SimplyConvert Pro provides high-precision results in real-time. We support a wide range of global standards, including Metric and Imperial systems.</p>
     </section>
+
+    <section class="content-section">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div style="margin-bottom: 20px;">
+            <p><strong>How many inches are in a centimeter?</strong></p>
+            <p>There are approximately 0.3937 inches in one centimeter. Conversely, 1 inch equals 2.54 centimeters.</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <p><strong>How do I convert Kilograms to Pounds?</strong></p>
+            <p>To convert kilograms to pounds, multiply the mass by 2.20462. Our tool handles this calculation instantly for you.</p>
+        </div>
+        <div>
+            <p><strong>Is SimplyConvert Pro free to use?</strong></p>
+            <p>Yes! SimplyConvert Pro is a 100% free utility designed for students, DIYers, and professionals alike.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h3>About SimplyConvert Pro</h3>
+        <p>SimplyConvert Pro was built to provide a fast, ad-free (for now!), and highly accurate way to switch between global measurement units. Our mission is to strip away the clutter of traditional conversion sites and provide a "utility-first" experience for students, engineers, and everyday users.</p>
+        <p><strong>Have a suggestion?</strong> We are constantly adding new units. If you'd like to see a specific category added, feel free to reach out.</p>
+        <a href="mailto:support@simplyconvert.pro" style="display: inline-block; background: white; color: var(--primary); padding: 10px 20px; border-radius: 10px; font-weight: 700; text-decoration: none; margin-top: 10px;">📩 Contact Support</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 SimplyConvert Pro. All rights reserved.</p>
+        <div style="margin-top: 10px;">
+            <span id="privacyLink" onclick="togglePrivacy()">Privacy Policy</span>
+        </div>
+
+        <div id="privacySection">
+            <h3 style="margin-bottom: 10px;">Privacy Policy</h3>
+            <p style="margin-bottom: 10px; font-size: 13px; color: #4b5563;">At SimplyConvert Pro, we value your privacy. This website uses cookies to analyze traffic and serve personalized ads via Google AdSense. By using this site, you consent to our use of these cookies.</p>
+            <p style="font-size: 13px; color: #4b5563;">We do not collect personal identification information unless voluntarily provided by the user.</p>
+            <button class="close-btn" onclick="togglePrivacy()">Close</button>
+        </div>
+    </footer>
 
     <script>
         const library = {
@@ -301,6 +364,11 @@
             if (t === 'celsius') return c;
             if (t === 'fahrenheit') return (c * 9/5) + 32;
             if (t === 'kelvin') return c + 273.15;
+        }
+
+        function togglePrivacy() {
+            const section = document.getElementById('privacySection');
+            section.style.display = (section.style.display === 'block') ? 'none' : 'block';
         }
 
         initUnits();
