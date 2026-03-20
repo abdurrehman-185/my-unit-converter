@@ -21,7 +21,7 @@
 
     <title>SimplyConvert Pro | Free Unit Converter: Digital, DIY, Cooking & More</title>
     <meta name="description" content="Fast, free, and accurate unit converter. Easily convert length, weight, digital storage (GB to MB), number bases (Hex to Dec), and cooking units.">
-    <meta name="keywords" content="free unit converter, simplyconvert pro, GB to MB, Hex to Binary, decimal to hexadecimal, bits to bytes, drill bit conversion, cooking conversions, measurement converter">
+    <meta name="keywords" content="free unit converter, simplyconvert pro, GB to MB, Hex to Binary, decimal to hexadecimal, bits to bytes, drill bit conversion, cooking conversions, measurement converter, DIY help">
   
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   
@@ -109,6 +109,7 @@
         .content-section table { width: 100%; border-collapse: collapse; margin-top: 15px; }
         .content-section th { text-align: left; border-bottom: 2px solid var(--primary); padding: 10px; }
         .content-section td { padding: 10px; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        body.dark-mode td { border-bottom: 1px solid rgba(255,255,255,0.05); }
 
         footer { width: 100%; max-width: 800px; text-align: center; color: var(--text-muted); padding: 30px; }
         #privacyLink { color: var(--primary); text-decoration: underline; cursor: pointer; font-weight: 600; }
@@ -125,13 +126,13 @@
     <div class="converter-card">
         <header>
             <h1>Unit Converter</h1>
-            <p style="color:var(--text-muted); font-size: 14px;">SimplyConvert Pro v1.5</p>
+            <p style="color:var(--text-muted); font-size: 14px;">SimplyConvert Pro v1.7</p>
         </header>
 
         <div class="field-group">
             <label>Category</label>
-            <select id="category" onchange="initUnits(true)">
-                <option value="length">📏 Length</option>
+            <select id="category" onchange="updateDynamicContent(); initUnits(true);">
+                <option value="length">📏 Length / DIY</option>
                 <option value="weight">⚖️ Weight / Mass</option>
                 <option value="temp">🌡️ Temperature</option>
                 <option value="volume">🥣 Volume / Cooking</option>
@@ -163,33 +164,69 @@
                 <span id="copyText">📋 Copy Result</span>
             </button>
         </div>
-        <p style="text-align: center; font-size: 11px; color: var(--text-muted); margin-top: 15px;">✓ Precision Verified Logic</p>
+        <p style="text-align: center; font-size: 11px; color: var(--text-muted); margin-top: 15px;">✓ Precision Verified & Accuracy Guaranteed</p>
     </div>
 
-    <section class="content-section">
-      <h3>Tech & Digital Reference</h3>
+    <div id="info-length" class="content-section dynamic-info">
+      <h3>📏 DIY & Construction Reference</h3>
+      <table>
+        <thead><tr><th>Common Need</th><th>Conversion</th></tr></thead>
+        <tbody>
+          <tr><td>Standard Drill Bit (1/4 inch)</td><td>6.35 mm</td></tr>
+          <tr><td>Plywood Thickness (3/4 inch)</td><td>19.05 mm</td></tr>
+          <tr><td>Room Area (100 sq ft)</td><td>9.29 sq meters</td></tr>
+        </tbody>
+      </table>
+      <div style="margin-top:20px;">
+          <p><strong>FAQ:</strong> 1 inch equals 2.54 centimeters. This tool helps DIYers accurately switch between metric and imperial tools.</p>
+      </div>
+    </div>
+
+    <div id="info-volume" class="content-section dynamic-info" style="display:none;">
+      <h3>🥣 Kitchen & Cooking Conversions</h3>
+      <table>
+        <thead><tr><th>Measurement</th><th>Metric Equivalent</th></tr></thead>
+        <tbody>
+          <tr><td>1 Cup (US Standard)</td><td>236.59 ml</td></tr>
+          <tr><td>1 Tablespoon</td><td>14.79 ml</td></tr>
+          <tr><td>1 Teaspoon</td><td>4.93 ml</td></tr>
+        </tbody>
+      </table>
+      <div style="margin-top:20px;">
+          <p><strong>FAQ:</strong> There are exactly 16 tablespoons in 1 US standard cup. This is vital for following international recipes.</p>
+      </div>
+    </div>
+
+    <div id="info-digital" class="content-section dynamic-info" style="display:none;">
+      <h3>💾 Digital Storage & IT Reference</h3>
       <table>
         <thead><tr><th>Conversion</th><th>Value</th></tr></thead>
         <tbody>
           <tr><td>1 Gigabyte (GB)</td><td>1024 Megabytes (MB)</td></tr>
           <tr><td>1 Byte</td><td>8 Bits</td></tr>
-          <tr><td>Decimal 15</td><td>Hexadecimal F</td></tr>
           <tr><td>1 Terabyte (TB)</td><td>1024 Gigabytes (GB)</td></tr>
         </tbody>
       </table>
-    </section>
+      <div style="margin-top:20px;">
+          <p><strong>FAQ:</strong> SimplyConvert Pro uses the Binary standard (1024) instead of the Decimal standard (1000) for maximum tech accuracy.</p>
+      </div>
+    </div>
 
-    <section class="content-section">
-        <h2>Frequently Asked Questions (FAQ)</h2>
-        <div style="margin-bottom: 15px;">
-            <p><strong>Is 1 GB equal to 1000 or 1024 MB?</strong></p>
-            <p>In computing (Binary standard), 1 GB equals 1,024 MB. Some manufacturers use the decimal standard (1,000 MB), but SimplyConvert Pro uses the 1,024 standard for precision.</p>
-        </div>
-        <div>
-            <p><strong>How do I convert Decimal to Hex?</strong></p>
-            <p>Select "Number Bases," set From to Decimal and To to Hex. Hexadecimal uses numbers 0-9 and letters A-F to represent values.</p>
-        </div>
-    </section>
+    <div id="info-bases" class="content-section dynamic-info" style="display:none;">
+      <h3>🔢 Programmer's Base Reference</h3>
+      <p>Converting between number systems like Hexadecimal and Binary is essential for low-level programming and web design (like Hex colors).</p>
+      <div style="margin-top:15px;">
+          <p><strong>Decimal 15:</strong> Binary 1111 | Hexadecimal F</p>
+          <p><strong>Decimal 255:</strong> Binary 11111111 | Hexadecimal FF</p>
+      </div>
+    </div>
+
+    <div id="info-default" class="content-section">
+        <h3>About SimplyConvert Pro</h3>
+        <p>SimplyConvert Pro was built to provide a fast, ad-supported, and highly accurate way to switch between global measurement units. Our mission is to strip away the clutter of traditional sites and provide a "utility-first" experience.</p>
+        <p style="margin-top: 10px;"><strong>Have a suggestion?</strong> We are constantly adding new units. Reach out via email.</p>
+        <a href="mailto:support@simplyconvert.pro" style="color: var(--primary); font-weight: 600; text-decoration: none;">📩 Contact Support</a>
+    </div>
 
     <footer>
         <p>&copy; 2026 SimplyConvert Pro. All rights reserved.</p>
@@ -198,8 +235,8 @@
         </div>
         <div id="privacySection">
             <h3>Privacy Policy</h3>
-            <p>This site uses cookies for traffic analysis and AdSense monetization.</p>
-            <button onclick="togglePrivacy()" style="margin-top:10px; cursor:pointer;">Close</button>
+            <p>At SimplyConvert Pro, we value your privacy. This site uses cookies for traffic analysis and AdSense personalization. We do not collect personal data without your consent.</p>
+            <button onclick="togglePrivacy()" style="margin-top:10px; cursor:pointer; padding: 5px 10px;">Close</button>
         </div>
     </footer>
 
@@ -212,6 +249,13 @@
             digital: { bits: 8388608, bytes: 1048576, kilobytes: 1024, megabytes: 1, gigabytes: 0.0009765625, terabytes: 0.00000095367 },
             bases: { decimal: 10, binary: 2, hex: 16, octal: 8 }
         };
+
+        function updateDynamicContent() {
+            const cat = document.getElementById('category').value;
+            document.querySelectorAll('.dynamic-info').forEach(el => el.style.display = 'none');
+            const target = document.getElementById('info-' + cat);
+            if (target) target.style.display = 'block';
+        }
 
         function savePreference() {
             const prefs = {
@@ -233,13 +277,11 @@
             const fromS = document.getElementById('fromUnit');
             const toS = document.getElementById('toUnit');
             const units = Object.keys(library[cat]);
-            
             fromS.innerHTML = ''; toS.innerHTML = '';
             units.forEach(u => {
                 fromS.options.add(new Option(u.toUpperCase(), u));
                 toS.options.add(new Option(u.toUpperCase(), u));
             });
-
             if (!isUserChange) {
                 const prefs = loadPreference();
                 if (prefs && prefs.cat === cat) {
@@ -255,31 +297,27 @@
             const from = document.getElementById('fromUnit').value;
             const to = document.getElementById('toUnit').value;
             const display = document.getElementById('outputValue');
-
             if (isUserChange) savePreference();
             if (!inputVal) { display.textContent = "0"; return; }
-
             let result;
-
             if (cat === 'bases') {
                 try {
                     const baseMap = { decimal: 10, binary: 2, hex: 16, octal: 8 };
-                    const decimalVal = parseInt(inputVal, baseMap[from]);
-                    if (isNaN(decimalVal)) throw "Err";
-                    result = decimalVal.toString(baseMap[to]).toUpperCase();
-                } catch(e) { result = "Invalid Input"; }
+                    const decVal = parseInt(inputVal, baseMap[from]);
+                    if (isNaN(decVal)) throw "Err";
+                    result = decVal.toString(baseMap[to]).toUpperCase();
+                } catch(e) { result = "Invalid"; }
             } else if (cat === 'temp') {
                 const v = parseFloat(inputVal);
-                if (isNaN(v)) { result = "0"; } else { result = convertTemp(v, from, to).toFixed(2); }
+                result = isNaN(v) ? "0" : convertTemp(v, from, to).toFixed(2);
             } else {
                 const v = parseFloat(inputVal);
-                if (isNaN(v)) { result = "0"; } 
+                if (isNaN(v)) result = "0";
                 else {
                     const baseVal = v / library[cat][from];
                     result = (baseVal * library[cat][to]).toLocaleString(undefined, {maximumFractionDigits: 6});
                 }
             }
-            
             display.textContent = result;
             document.getElementById('resultLabel').textContent = to.toUpperCase();
         }
@@ -319,6 +357,7 @@
                 document.getElementById('category').value = prefs.cat;
                 if (prefs.dark) toggleDarkMode();
             }
+            updateDynamicContent();
             initUnits();
         };
     </script>
