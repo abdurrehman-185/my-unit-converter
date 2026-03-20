@@ -15,21 +15,13 @@
       "name": "SimplyConvert Pro",
       "operatingSystem": "Any",
       "applicationCategory": "UtilitiesApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "124"
-      }
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "124" }
     }</script>
 
     <title>SimplyConvert Pro | Free Unit Converter: Inches to CM, Weight & More</title>
-    <meta name="description" content="A fast, free, and accurate unit converter. Easily convert length, weight, temperature, area, and volume. Simple, professional, and mobile-friendly.">
-    <meta name="keywords" content="free unit converter, inches to cm, weight converter, kilograms to pounds, simplyconvert pro, measurement converter, drill bit conversion, cooking conversions, ml to cups">
+    <meta name="description" content="Fast, free, and accurate unit converter. Easily convert length, weight, temperature, area, and volume. Professional tool for DIY, cooking, and students.">
+    <meta name="keywords" content="free unit converter, inches to cm, weight converter, kilograms to pounds, simplyconvert pro, measurement converter, drill bit conversion, flooring area calculator, DIY measurement help, cooking conversions, ml to cups, tablespoons in a cup">
   
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   
@@ -52,9 +44,7 @@
         }
 
         * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+            box-sizing: border-box; margin: 0; padding: 0;
             font-family: 'Inter', sans-serif;
             transition: background var(--transition-speed), color var(--transition-speed);
         }
@@ -69,26 +59,15 @@
         }
 
         .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--glass);
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 12px;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 1000;
+            position: fixed; top: 20px; right: 20px;
+            background: var(--glass); border: 1px solid rgba(255,255,255,0.2);
+            padding: 12px; border-radius: 50%; cursor: pointer; z-index: 1000;
         }
 
         .converter-card {
-            background: var(--glass);
-            backdrop-filter: blur(10px);
-            width: 100%;
-            max-width: 480px;
-            padding: 40px;
-            border-radius: 32px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            margin-bottom: 40px;
+            background: var(--glass); backdrop-filter: blur(10px);
+            width: 100%; max-width: 480px; padding: 40px; border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); margin-bottom: 40px;
         }
 
         header { text-align: center; margin-bottom: 32px; }
@@ -98,14 +77,8 @@
         label { display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--primary); margin-bottom: 8px; }
         
         input, select { 
-            width: 100%; 
-            padding: 14px 16px; 
-            font-size: 16px; 
-            color: var(--text-main); 
-            background: rgba(243, 244, 246, 0.5); 
-            border: 2px solid transparent; 
-            border-radius: 12px; 
-            outline: none; 
+            width: 100%; padding: 14px 16px; font-size: 16px; color: var(--text-main); 
+            background: rgba(243, 244, 246, 0.5); border: 2px solid transparent; border-radius: 12px; outline: none; 
         }
 
         body.dark-mode input, body.dark-mode select { background: rgba(15, 23, 42, 0.5); }
@@ -114,70 +87,46 @@
 
         .unit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-        /* Result Section with Copy Button */
         .result-container { 
-            margin-top: 32px; 
-            padding: 24px; 
+            margin-top: 32px; padding: 24px; border-radius: 20px; text-align: center;
             background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%); 
-            border-radius: 20px; 
-            text-align: center; 
             border: 1px solid rgba(99, 102, 241, 0.2); 
-            position: relative;
         }
 
         #outputValue { font-size: 32px; font-weight: 800; color: var(--text-main); display: block; margin-top: 8px; }
         
         .copy-btn {
-            margin-top: 15px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 13px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: transform 0.2s;
-        }
-        .copy-btn:active { transform: scale(0.95); }
-
-        /* Accuracy Badge */
-        .version-badge {
-            margin-top: 20px;
-            font-size: 11px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
+            margin-top: 15px; background: var(--primary); color: white; border: none;
+            padding: 8px 16px; border-radius: 8px; font-weight: 600; cursor: pointer;
+            font-size: 13px; display: inline-flex; align-items: center; gap: 6px;
         }
 
         .content-section { 
-            width: 100%; 
-            max-width: 800px; 
-            background: var(--glass); 
-            padding: 40px; 
-            border-radius: 24px; 
-            color: var(--text-main); 
-            margin-bottom: 20px; 
-            line-height: 1.6; 
+            width: 100%; max-width: 800px; background: var(--glass); padding: 40px; 
+            border-radius: 24px; color: var(--text-main); margin-bottom: 20px; line-height: 1.6; 
         }
 
+        .content-section table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .content-section th { text-align: left; border-bottom: 2px solid var(--primary); padding: 10px; }
+        .content-section td { padding: 10px; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        body.dark-mode td { border-bottom: 1px solid rgba(255,255,255,0.05); }
+
         footer { width: 100%; max-width: 800px; text-align: center; color: var(--text-muted); padding: 30px; }
+        #privacyLink { color: var(--primary); text-decoration: underline; cursor: pointer; font-weight: 600; }
+        #privacySection { display: none; margin-top: 25px; text-align: left; background: white; padding: 25px; border-radius: 16px; color: #1f2937; }
+        body.dark-mode #privacySection { background: #1e293b; color: white; }
     </style>
 </head>
 <body>
 
-    <button class="theme-toggle" onclick="toggleDarkMode()">
+    <button class="theme-toggle" onclick="toggleDarkMode()" title="Toggle Dark Mode">
         <span id="themeIcon">🌙</span>
     </button>
 
     <div class="converter-card">
         <header>
             <h1>Unit Converter</h1>
-            <p style="color:var(--text-muted); font-size: 14px;">SimplyConvert Pro</p>
+            <p style="color:var(--text-muted); font-size: 14px;">SimplyConvert Pro v1.2</p>
         </header>
 
         <div class="field-group">
@@ -214,19 +163,50 @@
                 <span id="copyText">📋 Copy Result</span>
             </button>
         </div>
-
-        <div class="version-badge" style="text-align: center;">
-            ✓ v1.2 — Accuracy Verified
-        </div>
+        <p style="text-align: center; font-size: 11px; color: var(--text-muted); margin-top: 15px;">✓ Accuracy Verified</p>
     </div>
 
     <section class="content-section">
-        <h3>Pro Features</h3>
-        <p>SimplyConvert Pro now remembers your last used units automatically. No more re-selecting your preferences every time you visit.</p>
+      <h3>Quick Reference Tables</h3>
+      <table>
+        <thead><tr><th>DIY / Kitchen Need</th><th>Conversion</th></tr></thead>
+        <tbody>
+          <tr><td>1/4 inch Drill Bit</td><td>6.35 mm</td></tr>
+          <tr><td>1 Cup (US Standard)</td><td>236.59 ml</td></tr>
+          <tr><td>1 Tablespoon</td><td>14.79 ml</td></tr>
+          <tr><td>100 sq ft Area</td><td>9.29 sq meters</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="content-section">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div style="margin-bottom: 15px;">
+            <p><strong>How many tablespoons are in a cup?</strong></p>
+            <p>There are exactly 16 tablespoons in 1 US standard cup.</p>
+        </div>
+        <div>
+            <p><strong>Is SimplyConvert Pro free?</strong></p>
+            <p>Yes! SimplyConvert Pro is a 100% free tool for students and professionals alike.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h3>About SimplyConvert Pro</h3>
+        <p>Built for accuracy and speed. We prioritize a clean interface without the clutter of traditional conversion sites.</p>
+        <a href="mailto:support@simplyconvert.pro" style="color: var(--primary); font-weight: 600; text-decoration: none;">📩 Contact Support</a>
     </section>
 
     <footer>
         <p>&copy; 2026 SimplyConvert Pro. All rights reserved.</p>
+        <div style="margin-top: 10px;">
+            <span id="privacyLink" onclick="togglePrivacy()">Privacy Policy</span>
+        </div>
+        <div id="privacySection">
+            <h3>Privacy Policy</h3>
+            <p>This site uses cookies for traffic analysis and AdSense monetization.</p>
+            <button onclick="togglePrivacy()" style="margin-top:10px; cursor:pointer;">Close</button>
+        </div>
     </footer>
 
     <script>
@@ -238,7 +218,6 @@
             volume: { liters: 1, milliliters: 1000, cups: 4.22675, tablespoons: 67.628, teaspoons: 202.884, gallons: 0.264172, fluid_ounces: 33.814 }
         };
 
-        // 1. Memory Logic (LocalStorage)
         function savePreference() {
             const prefs = {
                 cat: document.getElementById('category').value,
@@ -251,8 +230,7 @@
 
         function loadPreference() {
             const saved = localStorage.getItem('convertPrefs');
-            if (!saved) return null;
-            return JSON.parse(saved);
+            return saved ? JSON.parse(saved) : null;
         }
 
         function initUnits(isUserChange = false) {
@@ -260,26 +238,17 @@
             const fromS = document.getElementById('fromUnit');
             const toS = document.getElementById('toUnit');
             const units = Object.keys(library[cat]);
-            
             fromS.innerHTML = ''; toS.innerHTML = '';
             units.forEach(u => {
                 fromS.options.add(new Option(u.replace('_', ' ').toUpperCase(), u));
                 toS.options.add(new Option(u.replace('_', ' ').toUpperCase(), u));
             });
-
-            // If loading for first time, use memory
             if (!isUserChange) {
                 const prefs = loadPreference();
                 if (prefs && prefs.cat === cat) {
-                    fromS.value = prefs.from;
-                    toS.value = prefs.to;
-                } else {
-                    toS.selectedIndex = 1;
-                }
-            } else {
-                toS.selectedIndex = 1;
-            }
-            
+                    fromS.value = prefs.from; toS.value = prefs.to;
+                } else { toS.selectedIndex = 1; }
+            } else { toS.selectedIndex = 1; }
             performConversion();
         }
 
@@ -289,17 +258,11 @@
             const from = document.getElementById('fromUnit').value;
             const to = document.getElementById('toUnit').value;
             const display = document.getElementById('outputValue');
-
             if (isUserChange) savePreference();
-
             if (isNaN(val)) { display.textContent = "0.00"; return; }
             let result;
-            if (cat === 'temp') {
-                result = convertTemp(val, from, to);
-            } else {
-                const baseVal = val / library[cat][from];
-                result = baseVal * library[cat][to];
-            }
+            if (cat === 'temp') { result = convertTemp(val, from, to); }
+            else { const baseVal = val / library[cat][from]; result = baseVal * library[cat][to]; }
             display.textContent = parseFloat(result.toFixed(4)).toLocaleString();
             document.getElementById('resultLabel').textContent = to.replace('_', ' ');
         }
@@ -314,11 +277,9 @@
             if (t === 'kelvin') return c + 273.15;
         }
 
-        // 2. Copy to Clipboard Logic
         function copyResult() {
             const res = document.getElementById('outputValue').textContent;
             navigator.clipboard.writeText(res);
-            
             const btnText = document.getElementById('copyText');
             btnText.textContent = "✅ Copied!";
             setTimeout(() => { btnText.textContent = "📋 Copy Result"; }, 2000);
@@ -326,12 +287,15 @@
 
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
-            document.getElementById('themeIcon').textContent = 
-                document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+            document.getElementById('themeIcon').textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
             savePreference();
         }
 
-        // Initialize from Memory on Load
+        function togglePrivacy() {
+            const section = document.getElementById('privacySection');
+            section.style.display = (section.style.display === 'block') ? 'none' : 'block';
+        }
+
         window.onload = () => {
             const prefs = loadPreference();
             if (prefs) {
